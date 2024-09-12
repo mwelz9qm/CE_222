@@ -44,7 +44,7 @@ class personalInfo
 {public:
     void setPersonalInfo(string first, string last, int m, int d, int y, string add); //setter
     void printPersonalInfo() const;
-    string getAddress();
+    string getAddress()const;
     //constructor with default parameters
     personalInfo(string first = "Jane", string last = "Doe", int m = 1, int d = 1, int y = 2000, string add = "123 Fake St");
 

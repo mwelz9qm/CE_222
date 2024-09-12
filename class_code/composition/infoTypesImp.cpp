@@ -22,13 +22,13 @@ string personType::getLastName() const
 {
     return lastName;
 }
-personType::personType(string first = "Jane", string last = "Doe") //constructor with default parameters
+personType::personType(string first, string last ) //constructor with default parameters
 {
     setName(first, last);
 }
 
 // implementation of date type
-dateType::dateType(int m = 1, int d = 1, int y = 2000) //constructor with default parameters
+dateType::dateType(int m , int d , int y ) //constructor with default parameters
 {
     setDate(m,d,y);
 }
@@ -70,8 +70,12 @@ void personalInfo::printPersonalInfo() const
     bDay.printDate();
     cout << "Address: " << address << endl;
 }
+
+string personalInfo::getAddress() const{
+    return address;
+}
 //constructor with default parameters
-personalInfo::personalInfo(string first = "Jane", string last = "Doe", int m = 1, int d = 1, int y = 2000, string add = "123 Fake St")
+personalInfo::personalInfo(string first , string last , int m , int d, int y , string add )
 {
     setPersonalInfo(first,last,m,d,y,add);
 }
