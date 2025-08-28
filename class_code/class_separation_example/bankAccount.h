@@ -14,7 +14,7 @@ class bankAccount
         string name;
     //class methods
     public:
-        bankAccount(); //constructor
+        bankAccount(double amount = 0, string n = " "); //constructor w/defaults params
         //getters
         double getBalance() const;
         string getName() const;

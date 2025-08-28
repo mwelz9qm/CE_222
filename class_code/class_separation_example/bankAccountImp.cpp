@@ -2,10 +2,10 @@
 
 //implementation of bankAccount class
 
-bankAccount::bankAccount()
+bankAccount::bankAccount(double amount,string n)
 {
-    balance = 0;
-    name = " ";
+    balance = amount;
+    name = n;
 }
 
 double bankAccount::getBalance() const

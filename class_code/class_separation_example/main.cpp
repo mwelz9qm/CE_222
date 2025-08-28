@@ -4,7 +4,7 @@
 
 int main()
 {
-    bankAccount myAccount;
+    bankAccount myAccount(476);
 
     cout << "Intial balance: $" << myAccount.getBalance() << endl << endl;
     

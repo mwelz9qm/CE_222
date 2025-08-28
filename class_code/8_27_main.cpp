@@ -1,9 +1,9 @@
-#pragma once
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
+//version where all the class is included in one file
 
 //interface for account class
 class bankAccount
@@ -24,6 +24,27 @@ class bankAccount
         void withdrawal(double amount);
         void setName(string newName);
 };
+
+//code for testing out the bankAccount class
+
+int main()
+{
+    bankAccount myAccount;
+
+    cout << "Intial balance: $" << myAccount.getBalance() << endl << endl;
+    
+    myAccount.deposit(1000);
+    myAccount.setName("Matt W");
+    cout << "New balance: $" << myAccount.getBalance() << endl;
+    cout << "Account Name: " << myAccount.getName() << endl << endl;
+
+    myAccount.withdrawal(465);
+    myAccount.setName("Matthew W");
+    cout << "New balance: $" << myAccount.getBalance() << endl;
+    cout << "Account Name: " << myAccount.getName() << endl<<endl;
+
+    return 0;
+}
 
 //implementation of account class methods
 
