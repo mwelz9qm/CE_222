@@ -1,23 +1,23 @@
 #pragma once
-#include"rectangleType.h" 
-//box class that inherits from our rectangleType
+#include "rectangleType.h"
+
 
 class boxType : public rectangleType
 {
 private:
 	double height;
-	//length and width are also member variables, but they are technically private
-	//so we can't access them directly
 public:
-	boxType(); //default constructor
-	boxType(double l, double w, double h); //constructor with parameters
-	
-	//getters
-	double getHeight() const; //we inherit getLength() and getWidth()
-	double getArea() const; //surface area
-	double getVolume() const; 
+	boxType(double l = 0, double w = 0, double h = 0); //constructor
+	void setDimensions(double l, double w, double h);
+	double getHeight() const;
+	double getVolume() const;
+	double getArea() const; //surface area of the box
 	void print() const;
-
-	//setter
-	void setDimension(double l, double w, double h);
 };
+
+
+//print, getArea, and setDimensions all appear in the base class
+//setDimensions is overloaded, so there is no ambiguity: the different versions take different parameters
+//getArea and print are overridden because the prototypes are identical
+//for example, to distinguish the print functions use:
+// rectangleType::print() vs boxType::print()

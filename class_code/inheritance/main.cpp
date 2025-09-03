@@ -1,28 +1,22 @@
 #include "rectangleType.h"
 #include "boxType.h"
+#include <iostream>
+using namespace std;
+
 
 int main()
 {
-	rectangleType myRectangle(3, 4);
-	myRectangle.print();
-	cout << "Area: " << myRectangle.getArea() << endl;
-	cout << "Perimeter: " << myRectangle.getPerimeter() << endl;
-	myRectangle.setDimension(8, 9);
-	myRectangle.print();
-	//other checks to still perform: default constructor, passing in negatives
-	//to constructor or set dimension
-	myRectangle.setDimension(-8, -9);
-	myRectangle.print();
 
-	//test boxType
-	boxType myBox;
+	rectangleType myR;
+
+	myR.print();
+	myR.setDimensions(7, 17);
+	myR.print();
+
+	boxType myBox(3000000000000000000,4000000000000000000,5000000000000000000);
 	myBox.print();
-	myBox.setDimension(2, 7, 10);
-	myBox.print();
-	cout << "Surface Area: " << myBox.getArea() << endl;
-	cout << "Volume: " << myBox.getVolume() << endl;
-
-
+	myBox.setDimensions(3.3, -12, 9.4);
+	cout << "The new height is " << myBox.getHeight() << endl;
 
 	return 0;
 }

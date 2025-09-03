@@ -1,22 +1,18 @@
 #pragma once
-#include<iostream>
 
-using namespace std;
+//rectangle type interface
 
-class rectangleType
-{
-private:
+class rectangleType {
+protected:
 	double length;
 	double width;
 public:
-	rectangleType(); //default constructor
-	rectangleType(double l, double w); //constructor with parameters
-	//getters
+	rectangleType(double l = 0, double w = 0); //constructor with default params
+	double getPerimeter() const;
+	double getArea() const;
+	void print() const;
 	double getLength() const;
 	double getWidth() const;
-	double getArea() const;
-	double getPerimeter() const;
-	void print() const;
-	//setter
-	void setDimension(double l, double w);
+	void setDimensions(double l, double w);
 };
+
