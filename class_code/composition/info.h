@@ -38,7 +38,7 @@ private:
 public:
 	personalInfo(int id = 1, string first = "Jane", string last = "Doe", int m = 1
 		, int d = 1, int y = 1970);
-	void setPersonalInfo(int id = 1, string first, string last, int m, int d, int y);
+	void setPersonalInfo(int id, string first, string last, int m, int d, int y);
 	void print() const;
 };
 

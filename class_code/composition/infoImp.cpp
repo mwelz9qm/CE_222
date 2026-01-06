@@ -32,7 +32,7 @@ void dateType::setDate(int m, int d, int y)
 }
 void dateType::print() const
 {
-	cout << month << "/" << day << "/" << year << endl;
+	cout << "Date: " << month << "/" << day << "/" << year << endl;
 }
 
 
@@ -51,6 +51,7 @@ void personalInfo::setPersonalInfo(int id, string first, string last, int m, int
 void personalInfo::print() const
 {
 	name.print();
+	cout << "Birth ";
 	bDay.print();
 	cout << "ID number: " << idNumber << endl;
 }
