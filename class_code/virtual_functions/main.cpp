@@ -23,7 +23,7 @@ delete data;
 
 
 
-
+// we originally had this as a normal base class and then changed it to pure virtual class
 class petType
 {
 protected:
